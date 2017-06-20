@@ -1,0 +1,151 @@
+/* Preset CSS */
+body {
+  margin: 0;
+}
+
+header, footer, main, nav, section {
+  display: block;
+}
+
+a {
+  background-color: transparent;
+}
+
+a:active, a:hover {
+  outline: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  border: 0;
+}
+
+/* Global */
+html {
+  color: #e1ddd7;
+  font-family: Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Header */
+.wrapper {
+  overflow: hidden;
+}
+
+.navbar {
+  background: url(../img/nav-bg.jpg);
+  border-top: 1px solid #463714;
+  border-bottom: 1px solid #463714;
+  width: 100vw;
+  z-index: 999;
+}
+
+.container {
+  padding: 0 20px;
+  margin: 0 auto;
+  max-width: 1180px;
+}
+
+ul li {
+  display: inline-block;
+  list-style: none;
+}
+
+ul li a {
+  color: #f0e6d2;
+  text-decoration: none;
+  padding: 16px 30px;
+  font-weight: 600;
+  font-size: 1.24571rem;
+  margin-right: 110px;
+  display: block;
+}
+
+.navbar-fixed {
+  position: fixed;
+}
+
+.active, a:hover {
+  text-shadow: 0 0 20px #e1ddd7;
+}
+
+.item {
+  position: relative;
+}
+
+.list::after {
+  bottom: 0;
+  background: url(../img/hover-top.png) no-repeat;
+}
+
+.list::before {
+  top: 0;
+  background: url(../img/hover-bottom.png) no-repeat;
+}
+
+.active .item::after, .active .item::before, a:hover .item::after, a:hover .item::before {
+  opacity: 1;
+}
+
+.item::after {
+  background: url(../img/hover-top.png) no-repeat;
+  bottom: -19px;
+}
+
+.item::after, .item::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translatex(-50%);
+  height: 14px;
+  width: 16px;
+  opacity: 0;
+}
+
+.item::before {
+  background: url(../img/hover-bottom.png) no-repeat;
+  top: -19px;
+}
+
+/* Showcase */
+.showcase {
+  background: url(../img/main-bg.jpg) center center;
+  height: 600px;
+  width: 100%;
+  position: relative;
+  background-size: cover;
+}
+
+.event {
+  text-align: center;
+  background: url(../img/fog.png) no-repeat;
+  width: 242px;
+  height: 165px;
+  position: absolute;
+  background-size: cover;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.vs {
+  font-size: 5.7rem;
+  letter-spacing: 15px;
+  position: relative;
+  margin-bottom: 0;
+  color: #dbfaff;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.date {
+  font-weight: bold;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  color: #dbfaff;
+  text-shadow:  0 0 10px #000;
+}
