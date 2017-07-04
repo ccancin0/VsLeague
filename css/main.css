@@ -228,7 +228,7 @@ img {
 }
 
 .vs {
-  font-size: 5.7rem;
+  font-size: 4.28rem;
   letter-spacing: 15px;
   position: relative;
   margin-bottom: 0;
@@ -238,7 +238,7 @@ img {
 
 .date {
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: .68rem;
   letter-spacing: 1px;
   color: #dbfaff;
   text-shadow:  0 0 10px #000;
@@ -247,15 +247,20 @@ img {
 .meter {
   position: absolute;
   margin: 0;
-  top: calc(100% - 32px);
+  top: calc(100% - 3px);
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
 }
 
 .meter-img {
-  display: block;
+  display: none;
   margin-bottom: 0;
+}
+
+.meter-mobile {
+  margin-bottom: 0;
+  width: 100vw;
 }
 
 .meter-labels {
@@ -281,10 +286,6 @@ img {
   padding: calc(100px + 15%) 0 312px;
 }
 
-.main-content {
-  padding-top: 124px;
-}
-
 .intro {
   position: relative;
   background: url(../img/swords.png) center top no-repeat;
@@ -303,29 +304,17 @@ img {
   position: relative;
 }
 
-.header-intro::before {
-  display: block;
-  background-image: url(../img/left-arrow.png);
-  left: 0;
-}
-
-.header-intro::after, .header-intro::before {
-  margin: 0;
-  width: 202px;
-  height: 24px;
-  background-size: cover;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.header-intro::after {
-  right: 0;
-  background-image: url(../img/right-arrow.png);
-}
-
 .header-intro::after, .header-intro::before {
   content: '';
+  display: block;
+  margin: 10px auto 0;
+  width: 280px;
+  height: 24px;
+  background: url(../img/arrow.png);
+}
+
+.header-intro::before {
+  display: none;
 }
 
 .header-inner {
@@ -529,6 +518,8 @@ img {
 .display-flex {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
 }
 
 .display-case {
@@ -540,8 +531,8 @@ img {
   flex-direction: column;
   position: relative;
   background: rgba(120, 134, 143, 0.5);
-  margin-bottom: 10px;
   color: #e1ddd7;
+  margin-bottom: 60px;
 }
 
 .display-item {
@@ -570,10 +561,9 @@ img {
 }
 
 .display-header {
-  padding: 130px 80px 50px;
   text-align: center;
   border-bottom: 1px solid #a1947e;
-  height: 160px;
+  padding: 120px 32px 32px;
 }
 
 .display-header h1 {
