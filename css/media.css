@@ -1,0 +1,36 @@
+@media (min-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  .nav-list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .navbar li a {
+    margin-right: 35px;
+  }
+
+  .sub-nav {
+    display: none;
+  }
+
+  .nav-icon {
+    display: none;
+  }
+
+  .mobile-nav-list {
+    display: none;
+  }
+
+  .showcase {
+    height: 600px;
+  }
+}
+
+@media (min-width: 480px) {
+  /*.showcase {
+    height: 400px;
+  }*/
+}

@@ -34,7 +34,7 @@ img {
 /* Global */
 html {
   color: #e1ddd7;
-  font-family: Arial,sans-serif;
+  font-family: sans-serif,Arial;
   font-size: 14px;
   line-height: 1.5;
   background: #000;
@@ -49,9 +49,9 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.5;
 }
 
- a {
+a {
    text-decoration: none;
- }
+}
 
 img {
   border: 0;
@@ -62,6 +62,7 @@ img {
 /* Header */
 .wrapper {
   overflow: hidden;
+  height: 60.15px;
 }
 
 .navbar {
@@ -70,12 +71,14 @@ img {
   border-bottom: 1px solid #463714;
   width: 100vw;
   z-index: 999;
+  position: absolute;
 }
 
 .container {
   padding: 0 20px;
   margin: 0 auto;
   max-width: 1180px;
+  width: 100%;
 }
 
 .navbar li a {
@@ -84,15 +87,18 @@ img {
   padding: 16px 30px;
   font-weight: 600;
   font-size: 1.24571rem;
-  margin-right: 110px;
   display: block;
+}
+
+.nav-list {
+  display: none;
 }
 
 .navbar-fixed {
   position: fixed;
 }
 
-.navbar.active, .navbar a:hover {
+.nav-list a.active, .navbar a:hover {
   text-shadow: 0 0 20px #e1ddd7;
 }
 
@@ -124,10 +130,86 @@ img {
   top: -19px;
 }
 
+.sub-nav {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 100%;
+  left: 0;
+  z-index: -1;
+  transform: translateX(-100%);
+  transition: transform .5s ease;
+  margin-top: 1px;
+  padding-top: 30px;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.sub-nav {
+  text-align: center;
+}
+
+.sub-nav li a {
+  padding: 15px;
+}
+
+.sub-nav li {
+  display: block;
+}
+
+.sub-nav-item {
+  color: #f0e6d2;
+  font-weight: 700;
+  font-size: 1.28rem;
+  padding: 16px 0;
+  flex: 0 1 auto;
+  transition: all .15s;
+}
+
+.nav-icon {
+  width: 40px;
+  padding: 17px 11px;
+}
+
+.nav-icon:active, .nav-icon:focus, .nav-icon:hover {
+  cursor: pointer;
+}
+
+.mobile-nav-list {
+  position: relative;
+  width: 38px;
+  height: 18px;
+  border-radius: 4px;
+  padding: 2px;
+}
+
+.nav-bar {
+  position: absolute;
+  width: 32px;
+  height: 2px;
+  background: #463714;
+}
+
+.bar-top {
+  top: 0;
+}
+
+.bar-center {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.bar-bottom {
+  bottom: 0;
+}
+
+.open {
+  transform: translateX(0);
+}
+
 /* Showcase */
 .showcase {
   background: url(../img/main-bg.jpg) center center;
-  height: 600px;
+  height: 322px;
   width: 100%;
   position: relative;
   background-size: cover;

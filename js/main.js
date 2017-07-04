@@ -24,4 +24,20 @@ $(document).ready(function() {
     $(this).closest('a').addClass('active');
     $('html,body').animate({scrollTop:$(this.hash).offset().top}, 800);
   });
+
+  $('.nav-icon').on('click', function() {
+    if ( $('.sub-nav').hasClass('open')) {
+      $('.sub-nav').removeClass('open');
+    }else {
+      $('.sub-nav').addClass('open');
+    }
+  });
+
+  $('.sub-nav-list a').on('click', function() {
+    if ( $('.sub-nav').hasClass('open')) {
+      $('.sub-nav').removeClass('open');
+    }else {
+      $('.sub-nav').addClass('open');
+    }
+  });
 });
